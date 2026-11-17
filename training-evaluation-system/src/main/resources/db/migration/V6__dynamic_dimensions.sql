@@ -1,0 +1,8 @@
+CREATE TABLE template_dimension(id BIGINT AUTO_INCREMENT PRIMARY KEY,template_id BIGINT NOT NULL,position_no INT NOT NULL,label VARCHAR(80) NOT NULL,weight INT NOT NULL,UNIQUE(template_id,position_no),FOREIGN KEY(template_id) REFERENCES evaluation_template(id));
+INSERT INTO template_dimension(template_id,position_no,label,weight) SELECT id,1,teaching_label,teaching_weight FROM evaluation_template;
+INSERT INTO template_dimension(template_id,position_no,label,weight) SELECT id,2,content_label,content_weight FROM evaluation_template;
+INSERT INTO template_dimension(template_id,position_no,label,weight) SELECT id,3,organization_label,organization_weight FROM evaluation_template;
+ALTER TABLE answer ADD COLUMN total_score DECIMAL(12,6) NULL;
+UPDATE answer SET total_score=(SELECT (answer.teaching*t.teaching_weight+answer.content*t.content_weight+answer.organization*t.organization_weight)*1.0/(t.teaching_weight+t.content_weight+t.organization_weight) FROM eligibility e JOIN evaluation_task task ON task.id=e.task_id JOIN evaluation_template t ON t.id=task.template_id WHERE e.id=answer.eligibility_id);
+CREATE TABLE answer_dimension(answer_id BIGINT NOT NULL,dimension_id BIGINT NOT NULL,score INT NOT NULL,PRIMARY KEY(answer_id,dimension_id),FOREIGN KEY(answer_id) REFERENCES answer(id),FOREIGN KEY(dimension_id) REFERENCES template_dimension(id));
+INSERT INTO answer_dimension(answer_id,dimension_id,score) SELECT a.id,d.id,CASE d.position_no WHEN 1 THEN a.teaching WHEN 2 THEN a.content ELSE a.organization END FROM answer a JOIN eligibility e ON e.id=a.eligibility_id JOIN evaluation_task t ON t.id=e.task_id JOIN template_dimension d ON d.template_id=t.template_id;

@@ -1,0 +1,15 @@
+# 生产必须显式提供数据库与管理员凭据；不设置演示密码或内存数据库回退。
+server:
+  address: ${SERVER_ADDRESS:0.0.0.0}
+  servlet:
+    session:
+      cookie:
+        secure: true
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+app:
+  public-base-url: ${PUBLIC_BASE_URL}

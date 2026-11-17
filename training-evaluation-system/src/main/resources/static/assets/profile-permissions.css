@@ -1,0 +1,9 @@
+.permission-options{border:0;padding:0;margin:24px 0;display:grid;gap:12px}
+.permission-options legend{font-weight:600;margin-bottom:14px}
+.permission-option{display:flex;align-items:center;gap:14px;padding:18px;border:1px solid #dce8e2;border-radius:12px;background:#f7faf8;cursor:pointer}
+.permission-option:has(input:checked){border-color:#70a596;background:#edf6f1}
+.permission-option input[type=checkbox]{appearance:auto;width:18px;height:18px;min-height:18px;flex:0 0 18px;margin:0;padding:0;accent-color:#1b5c50}
+.permission-option span{display:grid;gap:7px}.permission-option small{color:#627b71;line-height:1.6}
+
+body.admin-app.signed-in #message{top:88px;bottom:auto;right:24px;max-width:min(420px,calc(100vw - 48px));pointer-events:none;z-index:160}
+body.admin-app.signed-in #message:empty{display:none}

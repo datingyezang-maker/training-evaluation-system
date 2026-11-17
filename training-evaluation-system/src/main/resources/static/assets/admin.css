@@ -1,0 +1,50 @@
+/* 管理端独立样式，避免登录页布局规则影响移动评分表单。 */
+.admin-app{background:#f5f7fa;color:#202f43;min-height:100vh;background-image:radial-gradient(ellipse at 10% 60%,#e9f2f0 0,transparent 50%)}
+.admin-app header{height:88px;padding:0 5%;gap:16px;border-color:#e8edf1;background:#ffffffee}
+.admin-app .brand{border-radius:12px;width:54px;height:54px;display:grid;place-items:center;padding:0;font-size:17px;background:#205d55;box-shadow:0 6px 14px #205d5515}
+.admin-app header>span{font-size:19px;font-weight:600;letter-spacing:.5px}
+.admin-app header small{font-size:11px;font-weight:400;letter-spacing:1px;margin-top:2px;color:#87929e}
+.admin-app header button{margin-left:0;font-size:13px;background:#edf3f1;color:#205d55}
+.admin-app #password{margin-left:auto}
+.admin-app main{max-width:1240px;width:100%;margin:0 auto;padding:0 40px}
+.admin-app #login-panel{max-width:none;width:100%;min-height:calc(100vh - 170px);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(350px,.85fr);gap:76px;align-items:center;padding:58px 0 36px}
+.login-story{min-width:0;padding:0 4px}
+.story-tag{font-size:12px;color:#3d736a;display:flex;align-items:center;gap:9px;letter-spacing:2px;margin-bottom:28px}
+.story-tag>span{width:7px;height:7px;background:#408b79;border-radius:50%;box-shadow:0 0 0 5px #e0ece7}
+.admin-app .login-story h1{font-size:clamp(30px,3.2vw,44px);font-weight:650;line-height:1.55;letter-spacing:-1px;margin:0 0 20px;word-break:keep-all}
+.login-story h1>span{color:#2e7a69}
+.admin-app .story-description{font-size:14px;line-height:2;color:#7a8794;margin-bottom:34px}
+.workflow-visual{border:1px solid #e0e8e7;background:linear-gradient(135deg,#ffffffdd,#f7fbfa);padding:22px 24px;border-radius:16px;box-shadow:0 12px 36px #2b534508;max-width:520px}
+.visual-top{display:flex;justify-content:space-between;font-size:12px;color:#60736f;border-bottom:1px solid #e9eeeb;padding-bottom:16px}
+.visual-status{font-size:10px;color:#578778;background:#eaf3ee;padding:1px 8px;border-radius:4px}
+.visual-steps{display:flex;justify-content:space-between;gap:10px;align-items:center;padding-top:22px}
+.visual-steps b{display:block;font-size:12px;color:#5a8c7d;font-weight:500;margin-bottom:8px}
+.visual-steps strong{display:block;font-size:14px;font-weight:600;color:#344c46}
+.visual-steps small{font-size:10px;color:#92a29b;margin-top:4px}
+.visual-steps i{font-style:normal;color:#bbcfc7}
+.story-bottom{display:flex;gap:26px;font-size:11px;color:#92a29d;margin-top:25px}
+.story-bottom span:before{content:'✓';color:#549781;margin-right:7px}
+.login-card{background:white;border:1px solid #e7ebef;border-radius:20px;padding:36px 36px 26px;box-shadow:0 20px 65px #243d5010;width:100%;max-width:440px;justify-self:end}
+.login-symbol{width:42px;height:42px;background:#eef5f2;color:#337b68;border-radius:12px;display:grid;place-items:center;font-size:20px;font-weight:600;margin-bottom:24px}
+.admin-app .login-kicker{color:#98a1aa;font-size:12px;margin:0 0 4px}
+.admin-app .login-card h2{font-size:25px;font-weight:650;letter-spacing:.5px;margin:0 0 8px}
+.admin-app .login-subtitle{font-size:12px;color:#929ba5;margin:0 0 28px}
+.admin-app #login-form label{font-size:12px;color:#4b5867;margin:0 0 20px;font-weight:500}
+.admin-app #login-form input{height:48px;padding:0 14px;border:1px solid #e0e6eb;background:#fafbfd;border-radius:8px;font-size:13px;margin-top:8px;transition:border-color .2s,box-shadow .2s}
+.admin-app #login-form input::placeholder{color:#b0b7c0;font-size:12px}
+.admin-app #login-form input:focus{outline:none;border-color:#4f8c7d;background:white;box-shadow:0 0 0 3px #3b806b12}
+.login-help{display:flex;justify-content:space-between;gap:8px;font-size:10px;color:#9aa3ad;margin:0 0 24px}
+.admin-app #login-form button{width:100%;height:48px;border-radius:8px;background:#256b5c;font-size:14px;position:relative;box-shadow:0 6px 12px #256b5c20;transition:background .2s,transform .2s}
+.admin-app #login-form button:hover{background:#1c584c;transform:translateY(-1px)}
+#login-form button>span{position:absolute;right:18px}
+.login-notice{text-align:center;color:#a1aaa5;font-size:10px;padding-top:22px;margin-top:25px;border-top:1px solid #f0f2f4}
+.login-notice>span{font-size:15px;margin-right:4px;color:#6b9988}
+.admin-app footer{text-align:center;padding:16px 24px;font-size:10px;color:#a6afb5}
+.admin-app #message{margin:0;padding:0 0 12px;font-size:13px}
+.admin-app #workspace{padding-top:36px;min-height:calc(100vh - 155px)}
+.admin-app #workspace .panel{border-color:#e4e9ee;border-radius:14px;box-shadow:0 5px 18px #20354c04}
+.admin-app nav button{font-size:13px;border:1px solid #e0e8e3;background:white}
+.admin-app nav button:hover{background:#e5f0eb}
+@media(min-width:1500px){.admin-app #login-panel{gap:110px;padding-top:70px;padding-bottom:60px}}
+@media(max-width:960px){.admin-app #login-panel{gap:32px;grid-template-columns:minmax(0,1fr) minmax(320px,1fr)}.admin-app main{padding:0 28px}.login-card{padding:28px}.admin-app .login-story h1{font-size:30px}.workflow-visual{padding:18px 16px}.visual-steps small{font-size:9px}.story-bottom{gap:15px}}
+@media(max-width:700px){.admin-app header{height:76px;padding:0 20px}.admin-app header>span{font-size:16px}.admin-app .brand{width:44px;height:44px;font-size:14px}.admin-app main{padding:0 20px}.admin-app #login-panel{grid-template-columns:minmax(0,1fr);gap:24px;min-height:auto;padding:34px 0 24px}.story-tag{margin-bottom:14px}.admin-app .login-story h1{font-size:29px;line-height:1.45;margin-bottom:12px}.admin-app .story-description{margin:0;font-size:12px}.workflow-visual,.story-bottom{display:none}.login-card{max-width:none;justify-self:stretch;padding:26px}.login-symbol{display:none}.admin-app .login-subtitle{margin-bottom:22px}.admin-app .login-help{font-size:10px}.admin-app header button{padding:7px 10px}.admin-app footer{padding-top:4px}}

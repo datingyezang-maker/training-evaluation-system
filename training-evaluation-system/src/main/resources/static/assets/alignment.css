@@ -1,0 +1,14 @@
+/* 统一控件对齐；关闭图标用几何线条绘制，消除字体基线差异。 */
+body.admin-app #detail .drawer-close,body.admin-app #editor #close-editor{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;width:32px;height:32px;min-width:32px;min-height:32px;flex:none;padding:0!important;margin:0;font-size:0!important;line-height:1!important;vertical-align:middle;overflow:hidden}
+body.admin-app #detail .drawer-close::before,body.admin-app #detail .drawer-close::after,body.admin-app #editor #close-editor::before,body.admin-app #editor #close-editor::after{content:'';position:absolute;left:50%;top:50%;width:13px;height:1.5px;border-radius:1px;background:#76917c;transform:translate(-50%,-50%) rotate(45deg);pointer-events:none}
+body.admin-app #detail .drawer-close::after,body.admin-app #editor #close-editor::after{transform:translate(-50%,-50%) rotate(-45deg)}
+body.admin-app #detail .drawer-close:hover::before,body.admin-app #detail .drawer-close:hover::after,body.admin-app #editor #close-editor:hover::before,body.admin-app #editor #close-editor:hover::after{background:#245d49}
+body.admin-app #nav-toggle{position:relative;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;min-width:32px;padding:0!important;font-size:0!important;line-height:1}
+body.admin-app:not(.signed-in) #nav-toggle{display:none}
+body.admin-app #nav-toggle::before{content:'';position:absolute;left:50%;top:50%;width:14px;height:1.5px;background:#6c8978;border-radius:1px;box-shadow:0 -5px 0 #6c8978,0 5px 0 #6c8978;transform:translate(-50%,-50%)}
+body.admin-app.signed-in .row-actions button,body.admin-app.signed-in #pagination button,body.admin-app.signed-in #tools>a,body.admin-app.signed-in #tools>button,body.admin-app .actions button,body.admin-app .picker-paging button,body.admin-app .enrolled-student>button{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;vertical-align:middle;line-height:1.5}
+body.admin-app .student-avatar,body.admin-app .account-avatar,body.admin-app .workspace-mark,body.admin-app .step-number{display:inline-flex;align-items:center;justify-content:center;line-height:1;flex-shrink:0;box-sizing:border-box}
+body.admin-app #detail .picker-selection label,body.admin-app #detail .picker-selection{display:flex;align-items:center;line-height:1.5}
+body.admin-app #detail .picker-selection input[type=checkbox],body.admin-app #detail .student-choice input[type=checkbox],body.admin-app #detail .student-choice input[type=radio]{display:inline-block;width:16px;height:16px;min-width:16px;min-height:16px;flex:0 0 16px;margin:0;padding:0;vertical-align:middle}
+body.admin-app .dimension-row{align-items:center}body.admin-app .dimension-row button{height:42px;display:inline-flex;align-items:center;justify-content:center;line-height:1;margin:0;padding:0 5px}
+body.admin-app #action-menu button{display:flex;align-items:center;justify-content:flex-start;line-height:1.5}

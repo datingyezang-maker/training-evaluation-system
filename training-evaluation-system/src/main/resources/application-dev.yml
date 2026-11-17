@@ -1,0 +1,15 @@
+# 本机开发使用 MySQL；密码通过环境变量注入，不写入版本库。
+server:
+  address: 127.0.0.1
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:mysql://127.0.0.1:3307/training_evaluation?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+# 仅 dev 提供本机调试密码；prod 仍强制通过环境变量设置。
+app:
+  # 临时扫码联调地址；ngrok 地址变化时更新，环境变量可优先覆盖。
+  public-base-url: ${PUBLIC_BASE_URL:https://graeme-brinish-granville.ngrok-free.dev}
+  security:
+    admin-password: ${APP_ADMIN_PASSWORD:Training@2026}

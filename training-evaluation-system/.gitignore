@@ -1,0 +1,12 @@
+/target/
+/data/
+/logs/
+/.idea/
+*.iml
+.env
+application-local.yml
+build-verification.log
+local-db-verification.log
+mysql-verification.log
+package-verification.log
+requirements-verification.log
